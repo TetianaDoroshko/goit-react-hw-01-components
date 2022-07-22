@@ -1,3 +1,4 @@
+import { PropTypes } from 'prop-types';
 import {
   ProfileContainer,
   ProfileDescription,
@@ -36,4 +37,17 @@ const StatsItem = ({ label, quantity }) => {
       <ItemQuantity>{FormatInt(quantity)}</ItemQuantity>
     </Item>
   );
+};
+
+Profile.propTypes = {
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.objectOf(PropTypes.number),
+};
+
+StatsItem.propTypes = {
+  label: PropTypes.string.isRequired,
+  quantity: PropTypes.number.isRequired,
 };
