@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const List = styled.ul`
   width: 220px;
+  margin-bottom: 50px;
   list-style: none;
 `;
 
