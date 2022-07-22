@@ -3,6 +3,7 @@ import { getRandomHexColor } from 'utils/getRandomColor';
 
 export const StatsContainer = styled.section`
   width: 280px;
+  margin-bottom: 50px;
   background-color: #ffffff;
 `;
 
