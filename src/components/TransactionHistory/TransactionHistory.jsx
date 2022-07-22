@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {
   Table,
   TableHeader,
@@ -34,4 +35,24 @@ const TransactionItem = ({ item }) => {
       <TableData>{item.currency}</TableData>
     </TableRow>
   );
+};
+
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      type: PropTypes.string,
+      amount: PropTypes.string,
+      currency: PropTypes.string,
+    })
+  ),
+};
+
+TransactionItem.propTypes = {
+  item: PropTypes.shape({
+    id: PropTypes.string,
+    type: PropTypes.string,
+    amount: PropTypes.string,
+    currency: PropTypes.string,
+  }),
 };
